@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Personal Portfolio Website Design</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --bg-color: #1f242d;
+            --second-bg-color: #323946;
+            --text-color: #fff;
+            --main-color: #0ef;
+            --nav-text-color: #ff6f61;
+            --btn-bg-color: #05287a;
+            --btn-text-color: #fff;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: default;
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            color: var(--nav-text-color);
+            margin-left: 4rem;
+            transition: .3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--main-color);
+        }
+
+        #menu-icon {
+            font-size: 3.6rem;
+            color: var(--text-color);
+            display: none;
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-img img {
+            width: 35vw;
+        }
+
+        .home-content h3 {
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+
+        .home-content h3:nth-of-type(2) {
+            margin-bottom: 2rem;
+        }
+
+        .home-content h2 {
+            font-size: 5.6rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .home-content p {
+            font-size: 1.6rem;
+        }
+
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            background: transparent;
+            border: .2rem solid var(--main-color);
+            border-radius: 50%;
+            font-size: 2rem;
+            color: var(--main-color);
+            margin: 3rem 1.5rem 3rem 0;
+            transition: .5s ease;
+        }
+
+        .social-media a:hover {
+            background: var(--main-color);
+            color: var(--second-bg-color);
+            box-shadow: 0 0 1rem var(--main-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--btn-bg-color);
+            color: var(--btn-text-color);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            transition: background .3s;
+        }
+
+        .btn:hover {
+            background: var(--main-color);
+            color: var(--second-bg-color);
+        }
+
+        .about-content, .education-content, .contact-content {
+            font-size: 2rem;
+            line-height: 1.6;
+            margin: 2rem 0;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 2rem;
+            color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h2>Hello, I'm Punya!</h2>
+            <h2>I'm an <span>Intern at Prodigy Infotech</span></h2>
+            <p>I am currently a second-semester student at CHRIST(Deemed to be University), pursuing a BSc in Computer Science and Mathematics. My interest in technology and mathematics drives me to excel in my studies and personal projects.</p>
+            <div class="social-media">
+                <a href="https://github.com/"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/punya-shree-j-79098a2aa/"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+            <a href="https://drive.google.com/file/d/1RPhEhEU7mvIEP2_QZ6uNdNZfpPblmHvV/view?usp=drivesdk" class="btn">Download Resume</a>
+        </div>
+        <div class="home-img">
+            <img src="https://media.licdn.com/dms/image/D4E03AQF5R9hPQtPMBw/profile-displayphoto-shrink_800_800/0/1715701934925?e=1723680000&v=beta&t=uIehY9XHChNpq5mQf7aU_zIHXce7ie4D9hlHRgmTM5k" height="400px" width="200px" alt="">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <h1>About Me</h1>
+            <p>A dynamic and adaptable student with a broad range of interests and a strong passion for continuous learning and growth. Currently, I am a second-semester student at CHRIST (Deemed to be University), pursuing a BSc in Computer Science and Mathematics. My fascination with technology and mathematics motivates me to excel in my studies and personal projects. Through active participation in extracurricular activities and volunteer work, I have honed my leadership skills. As I explore the complexities of programming languages, I strive to deepen my understanding and proficiency in the field of Computer Science.</p>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <div class="education-content">
+            <h1>Educational Qualification</h1>
+            <p>I am currently pursuing a Bachelor of Science in Computer Science and Mathematics at CHRIST (Deemed to be University), a journey I began in 2023. Prior to this, I completed my Pre-University education at NMKRV PU College from 2021 to 2023.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h1>Contact Me</h1>
+            <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
+            <p>Email: <a href="mailto:punyagowda585@gmail.com">punyagowda585@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/punya-shree-j-79098a2aa/">Punya Shree J</a></p>
+        </div>
+    </section>
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
